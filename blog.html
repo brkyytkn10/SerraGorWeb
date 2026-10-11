@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Sağlık Köşesi | Dyt. Serra Gör</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="logo">
+            <img src="serra-logo.png" alt="Dyt. Serra Gör Logosu">
+            <span>Dyt. Serra Gör</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimda.html">Hakkımda</a></li>
+                <li><a href="hizmetler.html">Hizmetlerim</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sss.html">S.S.S.</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li class="mobile-only-btn">
+                    <a href="https://wa.me/905339255326" target="_blank" class="header-btn" style="width:100%; justify-content:center;">
+                        Randevu Al
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="https://wa.me/905339255326" target="_blank" class="header-btn header-btn-desktop">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z" />
+            </svg>
+            Randevu Al
+        </a>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Sağlık Köşesi</h1>
+        <p style="text-align: center; max-width: 700px; margin: -30px auto 50px auto; color: #666;">
+            Bilimsel veriler ışığında fitoterapi, fonksiyonel tıp ve sağlıklı yaşam üzerine güncel notlarımı burada paylaşıyorum.
+        </p>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <img src="https://images.pexels.com/photos/1340116/pexels-photo-1340116.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Zerdeçal" class="blog-img">
+                <div class="blog-content">
+                    <div class="blog-meta"><span class="blog-category">Fitoterapi</span><span>16 Aralık 2025</span></div>
+                    <h3>Doğanın Eczanesi: Zerdeçal ve Kurkumin Mucizesi</h3>
+                    <p>Enflamasyonla savaşta en güçlü silahlarımızdan biri olan zerdeçal, doğru kullanılmadığında etkisini kaybedebilir.</p>
+                    <a href="blog-zerdecal.html" class="read-more">Devamını Oku →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bağırsak Sağlığı" class="blog-img">
+                <div class="blog-content">
+                    <div class="blog-meta"><span class="blog-category">Fonksiyonel Tıp</span><span>12 Aralık 2025</span></div>
+                    <h3>İkinci Beynimiz Bağırsaklar: "Sızdıran Bağırsak" Nedir?</h3>
+                    <p>Kronik yorgunluk, deri döküntüleri ve geçmeyen şişkinlik... Sorunun kaynağı bağırsak geçirgenliği olabilir mi?</p>
+                    <a href="blog-bagirsak.html" class="read-more">Devamını Oku →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sezgisel Beslenme" class="blog-img">
+                <div class="blog-content">
+                    <div class="blog-meta"><span class="blog-category">Beslenme Psikolojisi</span><span>05 Aralık 2025</span></div>
+                    <h3>Diyet Döngüsünü Kırmak: Açlık mı, Duygusal Boşluk mu?</h3>
+                    <p>Sürekli diyete başlayıp bozmaktan yoruldunuz mu? Sezgisel beslenme, bedenin sinyallerini tekrar duymanızı sağlar.</p>
+                    <a href="blog-sezgisel.html" class="read-more">Devamını Oku →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.pexels.com/photos/6027582/pexels-photo-6027582.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kış Çayı" class="blog-img">
+                <div class="blog-content">
+                    <div class="blog-meta"><span class="blog-category">Mevsimsel</span><span>01 Aralık 2025</span></div>
+                    <h3>Kış Aylarında Bağışıklığı Çelik Gibi Yapmanın 5 Yolu</h3>
+                    <p>Sadece C vitamini almak yeterli mi? D vitamini seviyeleri, çinko desteği ve ekinezya kullanımı hakkında notlar.</p>
+                    <a href="blog-kis-bagisiklik.html" class="read-more">Devamını Oku →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><h4>Dyt. Serra Gör</h4><p>Bilimsel ve bütüncül yaklaşımla, sürdürülebilir sağlıklı yaşam rehberiniz.</p></div>
+            <div class="footer-col"><h4>Hızlı Linkler</h4><ul><li><a href="index.html">Anasayfa</a></li><li><a href="hakkimda.html">Hakkımda</a></li><li><a href="hizmetler.html">Hizmetlerim</a></li><li><a href="blog.html">Blog</a></li><li><a href="sss.html">S.S.S.</a></li></ul></div>
+            <div class="footer-col"><h4>İletişim</h4><ul><li>📞 0533 925 53 26</li><li>📧 dytserragor@gmail.com</li><li>📍 İstanbul, Türkiye</li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 Diyetisyen Serra Gör. Tüm hakları saklıdır.</p></div>
+    </footer>
+    <script>
+        function toggleMenu() { const nav = document.querySelector('nav'); nav.classList.toggle('active'); }
+    </script>
+</body>
+</html>
