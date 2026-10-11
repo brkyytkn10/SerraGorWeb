@@ -1062,3 +1062,197 @@ footer {
         height: 250px;
     }
 }
+
+/* --- 14. YÜZEN WHATSAPP BUTONU --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+    z-index: 999;
+    transition: transform 0.3s;
+}
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    .whatsapp-float svg {
+        width: 30px;
+        height: 30px;
+    }
+
+@media (max-width: 900px) {
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+    }
+}
+
+/* --- 15. DANIŞAN YORUMLARI (TESTIMONIALS) --- */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: var(--secondary-color);
+    padding: 35px 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-stars {
+    color: #f5a623;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+    flex: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+    flex-shrink: 0;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    color: var(--text-dark);
+    display: block;
+}
+
+.testimonial-source {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* --- 16. PAKET / FİYATLANDIRMA KARTLARI --- */
+.pricing-section {
+    padding: 20px 0 60px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+    .pricing-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(74, 124, 89, 0.12);
+    }
+
+    .pricing-card.featured {
+        border-color: var(--primary-color);
+    }
+
+.pricing-badge {
+    background: var(--accent-color);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 50px;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.pricing-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.pricing-tagline {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 10px 0 25px;
+    text-align: left;
+    flex: 1;
+}
+
+    .pricing-features li {
+        padding: 7px 0;
+        color: #555;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 0.95rem;
+    }
+
+    .pricing-features li::before {
+        content: '✓';
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+/* --- 17. HARİTA --- */
+.map-wrapper {
+    margin-top: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+    .map-wrapper iframe {
+        width: 100%;
+        height: 350px;
+        border: 0;
+        display: block;
+    }
