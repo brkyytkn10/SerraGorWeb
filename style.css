@@ -1071,12 +1071,14 @@ footer {
     background-color: #25D366;
     width: 58px;
     height: 58px;
+    min-width: 58px;
+    min-height: 58px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-    z-index: 999;
+    z-index: 2147483000;
     transition: transform 0.3s;
 }
 
@@ -1105,17 +1107,42 @@ footer {
 }
 
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 30px;
 }
 
+.testimonials-grid .testimonial-card {
+    flex: 1 1 340px;
+    max-width: 420px;
+}
+
 .testimonial-card {
-    background: var(--secondary-color);
-    padding: 35px 30px;
-    border-radius: 15px;
+    background: var(--white);
+    padding: 40px 35px 30px;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-family: 'Lora', serif;
+    font-size: 7rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.08;
+    line-height: 1;
+    pointer-events: none;
 }
 
 .testimonial-stars {
@@ -1132,12 +1159,15 @@ footer {
     margin-bottom: 20px;
     font-style: italic;
     flex: 1;
+    position: relative;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
     gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
 }
 
 .testimonial-avatar {
@@ -1161,6 +1191,9 @@ footer {
 }
 
 .testimonial-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.8rem;
     color: #888;
 }
@@ -1171,9 +1204,16 @@ footer {
 }
 
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 30px;
+}
+
+.pricing-grid .pricing-card {
+    flex: 1 1 320px;
+    max-width: 360px;
 }
 
 .pricing-card {
@@ -1244,15 +1284,16 @@ footer {
 
 /* --- 17. HARİTA --- */
 .map-wrapper {
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
 }
 
     .map-wrapper iframe {
         width: 100%;
-        height: 350px;
+        height: 420px;
         border: 0;
         display: block;
     }
