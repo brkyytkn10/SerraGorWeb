@@ -51,8 +51,8 @@
                 <li><a href="sss.html">S.S.S.</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
                 <li class="mobile-only-btn">
-                    <a href="https://wa.me/905339255326" target="_blank" class="header-btn" style="width:100%; justify-content:center;">
-                        Randevu Al
+                    <a href="javascript:void(0)" class="header-btn" style="width:100%; justify-content:center;" data-cal-namespace="online-randevu" data-cal-link="serra.gor" data-cal-config='{"layout":"month_view"}'>
+                        Online Randevu Al
                     </a>
                 </li>
             </ul>
@@ -96,5 +96,12 @@
         <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.82L4.43 19.65L5.27 16.61L5.08 16.29C4.24 14.98 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 6.09C8.37 6.09 8.1 6.15 7.87 6.4C7.65 6.65 7 7.27 7 8.5C7 9.74 7.89 10.93 8 11.1C8.14 11.27 9.76 13.78 12.27 14.9C14.37 15.84 14.8 15.67 15.26 15.63C15.72 15.59 16.73 15.03 16.94 14.44C17.15 13.85 17.15 13.35 17.09 13.24C17.03 13.13 16.86 13.07 16.61 12.95C16.36 12.82 15.11 12.21 14.88 12.13C14.65 12.04 14.48 12 14.31 12.25C14.15 12.5 13.67 13.07 13.53 13.24C13.38 13.41 13.24 13.43 13 13.31C12.74 13.18 11.94 12.92 10.98 12.06C10.24 11.4 9.73 10.57 9.59 10.32C9.44 10.08 9.57 9.94 9.69 9.82C9.81 9.7 9.95 9.5 10.08 9.37C10.21 9.23 10.26 9.13 10.35 8.96C10.44 8.78 10.39 8.62 10.33 8.5C10.26 8.37 9.76 7.12 9.55 6.62C9.35 6.14 9.14 6.14 8.98 6.13L8.53 6.09Z"/></svg>
     </a>
     <script>function toggleMenu() { const nav = document.querySelector('nav'); nav.classList.toggle('active'); }</script>
+
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "online-randevu", {origin:"https://cal.com"});
+
+      Cal.ns["online-randevu"]("ui", {"theme":"light","styles":{"branding":{"brandColor":"#4a7c59"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
 </body>
 </html>

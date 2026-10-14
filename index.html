@@ -84,18 +84,19 @@
                 <li><a href="sss.html">S.S.S.</a></li>
                 <li><a href="iletisim.html">İletişim</a></li>
                 <li class="mobile-only-btn">
-                    <a href="https://wa.me/905339255326" target="_blank" class="header-btn" style="width:100%; justify-content:center;">
-                        Randevu Al
+                    <a href="javascript:void(0)" class="header-btn" style="width:100%; justify-content:center;" data-cal-namespace="online-randevu" data-cal-link="serra.gor" data-cal-config='{"layout":"month_view"}'>
+                        Online Randevu Al
                     </a>
                 </li>
             </ul>
         </nav>
 
-        <a href="https://wa.me/905339255326" target="_blank" class="header-btn header-btn-desktop">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592z" />
+        <a href="javascript:void(0)" class="header-btn header-btn-desktop" data-cal-namespace="online-randevu" data-cal-link="serra.gor" data-cal-config='{"layout":"month_view"}'>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
             </svg>
-            Randevu Al
+            Online Randevu Al
         </a>
     </header>
 
@@ -364,6 +365,13 @@
 
             resultBox.style.display = "block"; // Kutuyu görünür yap
         }
+    </script>
+
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "online-randevu", {origin:"https://cal.com"});
+
+      Cal.ns["online-randevu"]("ui", {"theme":"light","styles":{"branding":{"brandColor":"#4a7c59"}},"hideEventTypeDetails":false,"layout":"month_view"});
     </script>
 </body>
 </html>
