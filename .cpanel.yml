@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dytserra/public_html/
+    - /bin/cp -R * $DEPLOYPATH
