@@ -1326,12 +1326,40 @@ footer {
 
 .lead-magnet-form {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
     max-width: 480px;
     margin: 0 auto;
+}
+
+.lead-magnet-fields {
+    display: flex;
+    gap: 12px;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.lead-magnet-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 420px;
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+    .lead-magnet-consent input[type="checkbox"] {
+        margin-top: 3px;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        accent-color: var(--primary-dark);
+        cursor: pointer;
+    }
 
     .lead-magnet-form input[type="email"] {
         flex: 1;
@@ -1367,6 +1395,6 @@ footer {
 
 .lead-magnet-note {
     color: rgba(255,255,255,0.75);
-    font-size: 0.8rem;
-    margin-top: 14px;
+    font-size: 0.72rem;
+    margin-top: 22px;
 }

@@ -248,8 +248,14 @@
         <form action="https://formspree.io/f/mnnekynr" method="POST" class="lead-magnet-form">
             <input type="hidden" name="_subject" value="Ücretsiz Rehber Talebi">
             <input type="hidden" name="form_type" value="Lead Magnet - 3 Günlük Beslenme Rehberi">
-            <input type="email" name="email" required placeholder="E-posta adresiniz">
-            <button type="submit">Ücretsiz İndir</button>
+            <div class="lead-magnet-fields">
+                <input type="email" name="email" required placeholder="E-posta adresiniz">
+                <button type="submit">Ücretsiz İndir</button>
+            </div>
+            <label class="lead-magnet-consent">
+                <input type="checkbox" name="pazarlama_izni" required value="Evet, e-posta ile beslenme/sağlık içeriği almayı kabul ediyorum.">
+                <span>Dyt. Serra Gör'den beslenme ve sağlık içerikli e-postalar almak istiyorum. Dilediğim zaman abonelikten çıkabilirim.</span>
+            </label>
             <input type="hidden" name="_next" value="https://www.dytserragor.com/3-gunluk-saglikli-beslenme-rehberi.pdf">
         </form>
         <p class="lead-magnet-note">Spam yok, sadece faydalı içerikler. İstediğiniz zaman çıkabilirsiniz.</p>
