@@ -245,14 +245,14 @@
         <span class="lead-magnet-icon">📄</span>
         <h2>Ücretsiz Rehberinizi İndirin</h2>
         <p>"3 Günlük Sağlıklı Beslenme Rehberi"ni e-posta adresinize anında gönderelim — 5 altın kural ve örnek menü fikirleri içinde.</p>
-        <form action="https://formspree.io/f/mnnekynr" method="POST" class="lead-magnet-form">
+        <form action="https://formspree.io/f/mnnekynr" method="POST" class="lead-magnet-form" id="lead-magnet-form">
             <input type="hidden" name="_subject" value="Ücretsiz Rehber Talebi">
             <input type="hidden" name="form_type" value="Lead Magnet - 3 Günlük Beslenme Rehberi">
             <div class="lead-magnet-fields">
                 <input type="email" name="email" required placeholder="E-posta adresiniz">
                 <button type="submit">Ücretsiz İndir</button>
             </div>
-            <input type="hidden" name="_next" value="https://www.dytserragor.com/3-gunluk-saglikli-beslenme-rehberi.pdf">
+            <p class="lead-magnet-error" id="lead-magnet-error" style="display:none; color:#ffd2d2; font-size:0.85rem; margin-top:8px;">Bir şeyler ters gitti, lütfen tekrar deneyin.</p>
         </form>
     </section>
     <section class="testimonials-section">
@@ -367,6 +367,32 @@
 
             resultBox.style.display = "block"; // Kutuyu görünür yap
         }
+    </script>
+
+    <script>
+        document.getElementById('lead-magnet-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const errorBox = document.getElementById('lead-magnet-error');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            errorBox.style.display = 'none';
+            submitBtn.disabled = true;
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(function (response) {
+                if (response.ok) {
+                    window.location.href = 'https://www.dytserragor.com/3-gunluk-saglikli-beslenme-rehberi.pdf';
+                } else {
+                    throw new Error('Formspree error');
+                }
+            }).catch(function () {
+                errorBox.style.display = 'block';
+                submitBtn.disabled = false;
+            });
+        });
     </script>
 
     <script type="text/javascript">
