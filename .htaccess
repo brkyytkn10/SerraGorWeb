@@ -7,3 +7,6 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Force www
 RewriteCond %{HTTP_HOST} ^dytserragor\.com$ [NC]
 RewriteRule ^(.*)$ https://www.dytserragor.com/$1 [L,R=301]
+
+# Custom 404 page
+ErrorDocument 404 /404.html
