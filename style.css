@@ -100,6 +100,9 @@ nav a {
     }
 
 .lang-link {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.4;
     border: 1.5px solid var(--primary-color);
     border-radius: 50px;
     padding: 3px 14px !important;
@@ -1535,3 +1538,96 @@ html {
     nav a { font-size: 0.92rem; }
     .header-btn { padding: 9px 16px; font-size: 0.88rem; }
 }
+
+/* Icons (Lucide, ISC License, https://lucide.dev) */
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+}
+
+.icon-sm {
+    width: 16px;
+    height: 16px;
+    vertical-align: -3px;
+    color: var(--accent-color);
+}
+
+.icon-heading {
+    width: 1.05em;
+    height: 1.05em;
+    vertical-align: -0.12em;
+    margin-right: 4px;
+}
+
+.step-icon-box .icon { width: 40px; height: 40px; }
+
+.program-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: var(--primary-color);
+}
+.program-icon .icon { width: 36px; height: 36px; }
+.program-card:hover .program-icon { color: var(--white); }
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transition: background 0.3s, color 0.3s;
+}
+.service-icon .icon { width: 32px; height: 32px; }
+.service-card:hover .service-icon { background: var(--primary-color); color: var(--white); }
+
+.welcome-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+.welcome-icon .icon { width: 38px; height: 38px; }
+
+.lead-magnet-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
+}
+.lead-magnet-icon .icon { width: 34px; height: 34px; }
+
+.trust-icon .icon { width: 26px; height: 26px; }
+
+.recipe-thumb, .recipe-hero { color: var(--primary-dark); }
+.recipe-thumb .icon { width: 76px; height: 76px; stroke-width: 1.4; opacity: 0.85; }
+.recipe-hero .icon { width: 100px; height: 100px; stroke-width: 1.4; opacity: 0.85; }
+
+.notfound-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+.notfound-icon .icon { width: 44px; height: 44px; }
