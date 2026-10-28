@@ -1631,3 +1631,13 @@ html {
     color: var(--primary-color);
 }
 .notfound-icon .icon { width: 44px; height: 44px; }
+
+.info-card-icon .icon {
+    stroke-width: 2;
+    vertical-align: baseline;
+    transform: scale(1.2);
+}
+
+.info-card:hover .info-card-icon .icon {
+    transform: scale(1.3);
+}
