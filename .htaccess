@@ -10,3 +10,6 @@ RewriteRule ^(.*)$ https://www.dytserragor.com/$1 [L,R=301]
 
 # Custom 404 page
 ErrorDocument 404 /404.html
+
+# Instagram bio link
+RewriteRule ^link/?$ /link.html [L]
