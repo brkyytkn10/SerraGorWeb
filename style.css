@@ -1749,3 +1749,42 @@ html {
 .link-site { display: inline-block; margin-top: 26px; color: var(--primary-color); font-weight: 600; font-size: 0.9rem; }
 .link-foot { color: #999; font-size: 0.8rem; margin-top: 10px; }
 .link-foot a { color: #999; }
+
+/* İlgili yazılar */
+.related-posts { margin: 50px 0 10px; }
+.related-posts h2 {
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.related-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid #f0f0f0;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.related-card:hover { transform: translateY(-4px); border-color: var(--primary-color); box-shadow: 0 10px 22px rgba(0,0,0,0.08); }
+.related-img { width: 100%; height: 130px; object-fit: cover; }
+.related-thumb { height: 130px; display: flex; align-items: center; justify-content: center; }
+.related-thumb .icon { width: 56px; height: 56px; stroke-width: 1.4; opacity: 0.85; color: var(--primary-dark); }
+.related-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 18px; }
+.related-title { font-family: 'Lora', serif; font-size: 1.02rem; line-height: 1.35; color: var(--text-dark); }
+
+@media (max-width: 768px) {
+    .related-grid { grid-template-columns: 1fr; }
+    .related-card { flex-direction: row; }
+    .related-img, .related-thumb { width: 110px; height: auto; min-height: 96px; flex-shrink: 0; }
+    .related-thumb .icon { width: 40px; height: 40px; }
+}
