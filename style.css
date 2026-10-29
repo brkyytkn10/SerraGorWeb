@@ -1788,3 +1788,12 @@ html {
     .related-img, .related-thumb { width: 110px; height: auto; min-height: 96px; flex-shrink: 0; }
     .related-thumb .icon { width: 40px; height: 40px; }
 }
+
+.service-more {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.service-more:hover { color: var(--primary-dark); }
