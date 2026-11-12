@@ -1797,3 +1797,31 @@ html {
     font-size: 0.9rem;
 }
 .service-more:hover { color: var(--primary-dark); }
+
+/* Shorts videosu: tarif / blog sayfasının girişinde ikon ya da kapak fotoğrafı yerine dikey video */
+.shorts-hero {
+    display: flex;
+    justify-content: center;
+    padding: 26px 16px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #e8f5e9, #f6fbf6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.shorts-hero.v1 { background: linear-gradient(135deg, #ffe9a8, #fff6d9); }
+.shorts-hero.v2 { background: linear-gradient(135deg, #f6c9dc, #fbe7ef); }
+.shorts-hero.v3 { background: linear-gradient(135deg, #cfe9d2, #eaf6ec); }
+.shorts-hero.v4 { background: linear-gradient(135deg, #d9c3b1, #efe3d9); }
+.shorts-hero.v5 { background: linear-gradient(135deg, #f3e3c3, #faf2e1); }
+.shorts-hero iframe {
+    width: min(340px, 100%);
+    aspect-ratio: 9 / 16;
+    height: auto;
+    border: 0;
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+    background: #000;
+}
+/* yatay (uzun YouTube videosu) */
+.shorts-hero.yatay { padding: 0; background: none; box-shadow: none; }
+.shorts-hero.yatay iframe { width: 100%; aspect-ratio: 16 / 9; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
